@@ -1,0 +1,124 @@
+
+.button{
+    font-family: "Montserrat",sans-serif;
+    border:none;
+    transition-duration: 500ms;
+    text-decoration: none;
+    border-radius: 40px;
+    text-align: center;
+    outline: none;
+    &_login{
+        box-shadow: 0 8px 0px rgb(77 63 63 / 28%);
+        background: #CDE6F9;
+        position: absolute;
+        right: 7px;
+        margin-top: 13px;
+        color: $second-color;
+        width: 169px;
+        height: 38px;
+        border-radius: 40px;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 24px;
+        &:hover{
+            margin-top: 17px;
+            text-decoration: none;
+            box-shadow: 0 3px 0px #3c354a;
+            background-color: $second-color;
+            color:#ffff;
+            .loader {
+                .arc::after,.arc::before{
+                    background-color: #fff !important;
+                }
+                .arc {
+                    border-color:  #fff !important;
+     
+                }
+            }
+
+            
+
+   
+        }
+        p{
+            margin: 0 auto;
+        }
+    }
+
+    &_create-proj{
+        background:$main-color;
+        box-shadow: 0 3px 0px rgb(77 63 63 / 20%);
+        color:#ffff;
+        position: absolute;
+        right: 60px;
+        bottom: 22px;
+        height: 31px;
+        width: 117px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0 0 30px #fff;
+            bottom: 24px;
+        }
+
+
+    }
+}
+
+
+
+////Preloader///@at-root
+$loader-height:100px !default;
+$loader-width:100px !default;
+$loader-color:#7A5ABB ;
+$loader-duration:2.0s ;
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#loaders {
+    margin: 0 auto;
+    width: 1000px;
+}
+.loader-container {
+    position: relative;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+
+}
+$loader-duration: $loader-duration;
+
+
+.clock {
+	.loader {
+        width: 25px;
+        height: 25px;
+
+		.arc {
+			position: relative;
+			border: $loader-width*.02 solid $loader-color;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+		}
+		.arc::after,.arc::before{
+			content: '';
+			position: absolute;
+			top: 4%;
+			left: 48%;
+			width: 4%;
+			height: 46%;
+			background-color:$loader-color ;
+			transform-origin: 50% 100%;
+			border-radius: 5px;;
+			animation:rotate $loader-duration infinite linear;
+		}
+		.arc::after{
+			height: 36%;
+			top: 14%;
+			animation-duration: $loader-duration*6;
+		}
+	}
+}

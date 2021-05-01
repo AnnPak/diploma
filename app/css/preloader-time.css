@@ -1,0 +1,47 @@
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container{
+    margin-top: 5px;
+    display: inline-block;
+    
+}
+.d-none{
+    display: none;
+}
+.clock .loader {
+  
+    width: 25px;
+    height: 25px;
+}
+
+.clock .loader .arc {
+    position: relative;
+    border: 2px solid #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.clock .loader .arc::after,
+.clock .loader .arc::before {
+    content: '';
+    position: absolute;
+    top: 4%;
+    left: 48%;
+    width: 4%;
+    height: 46%;
+    background-color: #fff;
+    transform-origin: 50% 100%;
+    border-radius: 5px;
+    animation: rotate 2s infinite linear;
+}
+
+.clock .loader .arc::after {
+    height: 36%;
+    top: 14%;
+    animation-duration: 12s;
+}

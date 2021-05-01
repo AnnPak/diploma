@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import 'blocks/variables';
+@import 'blocks/reg';
+@import 'blocks/button';
+@import 'blocks/projects';
+@import 'blocks/forms';
+@import 'blocks/decomp';
+@import 'blocks/nav';
+
+body{
+margin: 0 ;
+}
+
+.workplace{
+    position: fixed;
+    min-height: 700px;
+    background-size: cover;
+    width: 100%;
+    background: url(../img/bg/bg_workplace.png) center (center/cover) no-repeat;
+}
